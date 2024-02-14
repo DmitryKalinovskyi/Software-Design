@@ -1,4 +1,4 @@
-﻿namespace ZooManager.Reports
+﻿namespace ZooManagerLibrary.Reports
 {
     public interface IReporter
     {
