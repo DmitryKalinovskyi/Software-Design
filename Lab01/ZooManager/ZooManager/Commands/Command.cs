@@ -1,6 +1,4 @@
-﻿using System.Windows.Input;
-
-namespace ZooManager.Commands
+﻿namespace ZooManager.Commands
 {
     public abstract class Command: ICloneable
     {

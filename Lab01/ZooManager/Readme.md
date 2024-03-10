@@ -1,4 +1,8 @@
-# List of principlces used in Lab01
+## UML class diagram
+
+![Alt UML diagram](https://github.com/DmitryKalinovskyi/Software-Design/tree/main/Lab01/classdiagram.drawio.png) 
+
+## List of principlces used in Lab01
 
 - Single Responsibility - all classes have only one purpose.
 For example, each entity in class library represents one concrete entity,
@@ -24,7 +28,8 @@ because i implement things that needed to work for zoo, and nothing more.
 Actual business logic and console interaction are separated into 2 projects.
 If needed, GUI application with WPF or Win forms can be created.
 
-- DRY - solution do not contains repeating code, classes are well-structurized with Command pattern usage, that helps to make code more dry.
+- DRY - solution do not contains repeating code, classes are well-structurized with Command pattern usage,
+that helps to make code more dry.
 
 - Program to Interfaces not Implementations - solution contains console project, that use Command pattern,
 this is abstraction that allow to make different action using 
