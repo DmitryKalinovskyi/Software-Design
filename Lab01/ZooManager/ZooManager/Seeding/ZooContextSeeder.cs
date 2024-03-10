@@ -42,6 +42,8 @@ namespace ZooManager.Seeding
             context.AnimalTypes.AddRange(new List<AnimalType>() { cat, dog, varan});
 
             context.Animals.AddRange(new List<Animal>() { cat1, dog1, varan1});
+
+            context.ZooWorkers.Add(zooWorker);
         }
     }
 }
