@@ -1,10 +1,23 @@
-﻿namespace ZooManagerLibrary.Reports
+﻿using ZooManagerLibrary.Core;
+
+namespace ZooManagerLibrary.Reports
 {
-    public class BaseReporter : IReporter
+    public class BaseReporter : IReportService
     {
+        private readonly ZooContext _context;
+
+        public BaseReporter(ZooContext context)
+        {
+            _context = context;
+        }
+
         public string GetReport()
         {
-            throw new NotImplementedException();
+            return $"""
+                Animals: {_context.Animals.Count()}
+                Aviarys: {_context.Aviaries.Count()}
+                Food: {_context.Foods.Count()}
+                """;
         }
     }
 }

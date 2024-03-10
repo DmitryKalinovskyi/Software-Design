@@ -1,9 +1,11 @@
-﻿namespace ZooManagerLibrary.Entities
+﻿using ZooManagerLibrary.Core;
+
+namespace ZooManagerLibrary.Entities
 {
     /// <summary>
     /// Describes aviary and animals inside it
     /// </summary>
-    public class Aviary
+    public class Aviary: EntityBase
     {
         public string ShortName { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace ZooManagerLibrary.Reports
 {
-    public interface IReporter
+    public interface IReportService
     {
         string GetReport();
     }

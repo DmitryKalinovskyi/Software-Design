@@ -1,4 +1,5 @@
 ﻿using ZooManagerLibrary.Core;
+using ZooManagerLibrary.Entities;
 
 namespace ZooManager.Commands.CommandList
 {
@@ -16,11 +17,6 @@ namespace ZooManager.Commands.CommandList
             _context = context;
         }
 
-        public override bool CanExecute(object? parameter)
-        {
-            return true;
-        }
-
         public override object Clone()
         {
             return new AddAnimal(_context, Description);
@@ -28,7 +24,17 @@ namespace ZooManager.Commands.CommandList
 
         public override void Execute(object? parameter)
         {
+            // Read animal data from console
 
+            Animal animal = new();
+
+            Console.Write("Enter animal name: ");
+            animal.Name = Console.ReadLine();
+
+            Console.WriteLine("Enter birth date of animal in format dd-mm-yyyy: ");
+            animal.BirthDate = DateTime.Parse(Console.ReadLine());
+
+            _context.Animals.Add(animal);
         }
     }
 }

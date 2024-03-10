@@ -1,9 +1,11 @@
-﻿namespace ZooManagerLibrary.Entities
+﻿using ZooManagerLibrary.Core;
+
+namespace ZooManagerLibrary.Entities
 {
     /// <summary>
     /// Manages information about worker
     /// </summary>
-    public class ZooWorker
+    public class ZooWorker: EntityBase
     {
         public string Name { get; set; }
 

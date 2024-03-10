@@ -14,11 +14,6 @@
             _handler = handler;
         }
 
-        public override bool CanExecute(object? parameter)
-        {
-            return true;
-        }
-
         public override object Clone()
         {
             return new ShowCommands(_handler, Description);

@@ -1,6 +1,8 @@
-﻿namespace ZooManagerLibrary.Entities
+﻿using ZooManagerLibrary.Core;
+
+namespace ZooManagerLibrary.Entities
 {
-    public class Food
+    public class Food: EntityBase
     {
         public string Name { get; set; }
 
@@ -20,6 +22,11 @@
             Name = name;
             Description = description;
             Amount = amount;
+        }
+
+        public override string ToString()
+        {
+            return $"Food: {Name}, amount: {Amount}";
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace ZooManagerLibrary.Entities
+﻿using ZooManagerLibrary.Core;
+
+namespace ZooManagerLibrary.Entities
 {
-    public class Animal
+    public class Animal: EntityBase
     {
         public string Name { get; set; }    
 
