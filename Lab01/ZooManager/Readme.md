@@ -29,7 +29,7 @@ If needed, GUI application with WPF or Win forms can be created.
 - Program to Interfaces not Implementations - solution contains console project, that use Command pattern,
 this is abstraction that allow to make different action using 
 different class for each action.
-	```
+	``` cs
 	// building commands and running console command handler
 	CommandHandler commandHandler = new();
 
@@ -46,7 +46,7 @@ different class for each action.
 
 - Fail Fast - console project command handler will throw an error if you try assing command that already defined, this will prevent bugs and stop the application.
 
-	```
+	``` cs
 	public void AddCommand(string commandName, Command commandAction)
 	{
 		if(_commands.ContainsKey(commandName))
