@@ -5,7 +5,12 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooManager", "ZooManager\ZooManager.csproj", "{343001AB-89A3-4AB6-A78C-B2F5541D5E2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooManagerLibrary", "ZooManagerLibrary\ZooManagerLibrary.csproj", "{1EF3CBE2-D834-4777-A2CF-0CDD8B4129EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooManagerLibrary", "ZooManagerLibrary\ZooManagerLibrary.csproj", "{1EF3CBE2-D834-4777-A2CF-0CDD8B4129EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{73AE3C61-38B6-4609-A2C1-494C6BB2D590}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

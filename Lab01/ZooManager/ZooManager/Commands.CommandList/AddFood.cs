@@ -38,9 +38,9 @@ namespace ZooManager.Commands.CommandList
             {
                 Console.WriteLine("Enter food amount: ");
                 
-                string amnt = Console.ReadLine();
+                string rawAmount = Console.ReadLine();
 
-                if(int.TryParse(amnt, out amount))
+                if(int.TryParse(rawAmount, out amount))
                 {
                     break;
                 }
