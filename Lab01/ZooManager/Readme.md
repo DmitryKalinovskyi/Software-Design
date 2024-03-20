@@ -1,6 +1,6 @@
 ## UML class diagram
 
-![Alt UML diagram](https://github.com/DmitryKalinovskyi/Software-Design/tree/main/Lab01/classdiagram.drawio.png) 
+![Alt UML diagram](../classdiagram.drawio.png) 
 
 ## List of principlces used in Lab01
 
