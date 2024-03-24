@@ -1,4 +1,4 @@
-﻿using Factory_Method.Services.SubscriptionService;
+﻿    using Factory_Method.Services.SubscriptionService;
 using Factory_Method.Services.SubscriptionService.Subscriptions;
 using Factory_Method.User;
 
@@ -15,7 +15,7 @@ namespace Factory_Method.Clients
             _subscriptionService = subscriptionService;
         }
 
-        public void TellUser(string message)
+        private void TellUser(string message)
         {
             Console.WriteLine($"Manager: {message}");
         }

@@ -15,7 +15,7 @@ namespace Factory_Method.Clients
             _subscriptionService = subscriptionService;
         }
 
-        public void DisplayMessageBox(string message)
+        private void DisplayMessageBox(string message)
         {
             Console.WriteLine($"App: {message}");
         }

@@ -17,7 +17,7 @@ namespace Factory_Method.Clients
             _subscriptionService = subscriptionService;
         }
 
-        public void ShowNotification(string message)
+        private void ShowNotification(string message)
         {
             Console.WriteLine($"Website notification: {message}");
         }
