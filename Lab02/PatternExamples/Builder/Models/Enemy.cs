@@ -2,7 +2,7 @@
 
 namespace Builder.Models
 {
-    public class Enemy: HumanoidEntity
+    public class Enemy : HumanoidEntity
     {
         public List<string> ListOfBadThingsDone { get; set; }
 

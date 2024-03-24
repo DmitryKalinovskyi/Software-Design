@@ -1,15 +1,9 @@
-﻿using Builder.CustomProperties;
-using Builder.Models;
+﻿using Builder.Models;
 using Builder.Models.EntityParts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Builder.Builders
 {
-    public abstract class DefaultHumanoidEntityBuilder: IHumanoidEntityBuilder
+    public abstract class DefaultHumanoidEntityBuilder : IHumanoidEntityBuilder
     {
         protected HumanoidEntity _humanoidEntity;
 
@@ -42,7 +36,7 @@ namespace Builder.Builders
             return this;
         }
 
-        public virtual IHumanoidEntityBuilder SetMaxHitpoins(double maxHitpoins) 
+        public virtual IHumanoidEntityBuilder SetMaxHitpoins(double maxHitpoins)
         {
             _humanoidEntity.MaxHitPoints.BaseValue = maxHitpoins;
             return this;

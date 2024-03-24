@@ -4,7 +4,7 @@ using Abstract_Factory.Products;
 void TestFactory(ITechFactory factory)
 {
     IEBook eBook = factory.CreateEBook();
-    ILaptop laptop = factory.CreateLaptop();   
+    ILaptop laptop = factory.CreateLaptop();
     INetbook netbook = factory.CreateNetbook();
     ISmartphone smartphone = factory.CreateSmartphone();
 

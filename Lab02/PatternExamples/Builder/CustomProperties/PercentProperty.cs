@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Builder.CustomProperties
 {
@@ -12,13 +7,13 @@ namespace Builder.CustomProperties
     /// Special property where present baseValue (basis), and percent of that value.
     /// Can be converted to double, as value used class Value property.
     /// </summary>
-    public class PercentProperty: INotifyPropertyChanged
+    public class PercentProperty : INotifyPropertyChanged
     {
         private double _baseValue;
 
         public double BaseValue
         {
-            get { return _baseValue;}
+            get { return _baseValue; }
             set
             {
                 _baseValue = value;
@@ -77,7 +72,7 @@ namespace Builder.CustomProperties
 
         public string GetInfo()
         {
-            return $"Base value - {BaseValue}, percentage - {Math.Round(Percent*100, 2)}%";
+            return $"Base value - {BaseValue}, percentage - {Math.Round(Percent * 100, 2)}%";
         }
     }
 }

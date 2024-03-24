@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Builder.Models
 {
-    public class Hero: HumanoidEntity
+    public class Hero : HumanoidEntity
     {
         public List<string> ListOfGoodThingsDone { get; set; }
 
@@ -22,7 +18,7 @@ namespace Builder.Models
             var builder = new StringBuilder(info);
             builder.AppendLine("List of good things done by hero: ");
 
-            foreach(var goodThing in ListOfGoodThingsDone)
+            foreach (var goodThing in ListOfGoodThingsDone)
             {
                 builder.AppendLine(goodThing);
             }

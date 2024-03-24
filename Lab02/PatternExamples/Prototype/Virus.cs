@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Prototype
 {
@@ -68,14 +63,14 @@ namespace Prototype
 
             var builder = new StringBuilder();
 
-            var tabsString = new string('\t', tabs); 
+            var tabsString = new string('\t', tabs);
 
             builder.Append(tabsString).AppendLine($"Name: {Name}");
             builder.Append(tabsString).AppendLine($"Weight: {Weight}");
             builder.Append(tabsString).AppendLine($"Age: {GetAge()}");
             builder.Append(tabsString).AppendLine($"Children count: {GetChildrenCount()}");
 
-            foreach(var child in Children)
+            foreach (var child in Children)
             {
                 builder.AppendLine(child.GetInfo(depth - 1, tabs + 1));
             }
@@ -87,7 +82,7 @@ namespace Prototype
         {
             int children = 0;
 
-            foreach(var child in Children)
+            foreach (var child in Children)
             {
                 // Add this child.
                 children++;

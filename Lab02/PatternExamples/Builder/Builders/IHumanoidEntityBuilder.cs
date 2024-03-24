@@ -1,10 +1,5 @@
-﻿using Builder.Models.EntityParts;
-using Builder.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Builder.Models;
+using Builder.Models.EntityParts;
 
 namespace Builder.Builders
 {

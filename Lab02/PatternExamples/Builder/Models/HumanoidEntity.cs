@@ -61,6 +61,6 @@ namespace Builder.Models
                 .AppendLine($"Magic Strength: {MagicStrength.GetInfo()}");
 
             return builder.ToString();
-        }   
+        }
     }
 }

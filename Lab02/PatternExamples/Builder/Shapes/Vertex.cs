@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Builder.Shapes
+﻿namespace Builder.Shapes
 {
     public struct Vertex
     {
-        public double X; 
-        public double Y; 
+        public double X;
+        public double Y;
         public double Z;
 
         public Vertex() : this(0, 0, 0) { }

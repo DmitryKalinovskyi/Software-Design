@@ -1,10 +1,5 @@
 ﻿using Builder.Models.Enchantments;
 using Builder.Shapes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Builder.Models.EntityParts
 {
@@ -14,7 +9,7 @@ namespace Builder.Models.EntityParts
         public IShape Shape { get; set; }
         public IEhchantment? Ehchanment { get; set; }
 
-        public Boots(): this("?", new Shape(), null) { }
+        public Boots() : this("?", new Shape(), null) { }
 
         public Boots(string name, IShape bootsShape, IEhchantment? ehchanment)
         {

@@ -6,10 +6,11 @@
 
         private static readonly object _lock = new();
 
-        public static Authenticator MainAuthenticator {
-            get 
+        public static Authenticator MainAuthenticator
+        {
+            get
             {
-                if(mainAuthenticator == null)
+                if (mainAuthenticator == null)
                 {
                     // lock to prevent overriding main instance.
                     lock (_lock)
@@ -17,12 +18,12 @@
                         mainAuthenticator ??= new Authenticator();
                     }
                 }
-                
+
                 return mainAuthenticator;
             }
         }
 
-        private Authenticator() 
+        private Authenticator()
         {
             Stamp = Guid.NewGuid();
             Console.WriteLine(Stamp);

@@ -15,7 +15,7 @@
         public void TurnOn()
         {
             PromptAvaibleUpdates();
-            
+
             DisplayDesktop();
         }
     }

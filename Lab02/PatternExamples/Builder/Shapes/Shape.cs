@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Builder.Shapes
+﻿namespace Builder.Shapes
 {
     public class Shape : IShape
     {
         private List<Vertex> _vertices;
-        
+
         public string Name { get; set; }
 
-        public Shape(): this(string.Empty){ }
+        public Shape() : this(string.Empty) { }
 
         public Shape(string name)
         {
@@ -20,7 +14,7 @@ namespace Builder.Shapes
             _vertices = new();
         }
 
-        public Shape(string name, List<Vertex> vertices) 
+        public Shape(string name, List<Vertex> vertices)
         {
             Name = name;
             _vertices = vertices;

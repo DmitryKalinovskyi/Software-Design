@@ -3,12 +3,7 @@ using Builder.Models;
 using Builder.Models.Enchantments;
 using Builder.Models.EntityParts;
 using Builder.Shapes;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Builder
 {
@@ -17,9 +12,9 @@ namespace Builder
         private IHeroBuilder _heroBuilder;
         private IEnemyBuilder _enemyBuilder;
 
-        public Director(): this(new DefaultHeroBuilder(), new DefaultEnemyBuilder()) { }
+        public Director() : this(new DefaultHeroBuilder(), new DefaultEnemyBuilder()) { }
 
-        public Director(IHeroBuilder heroBuilder): this(heroBuilder, new DefaultEnemyBuilder()) { }
+        public Director(IHeroBuilder heroBuilder) : this(heroBuilder, new DefaultEnemyBuilder()) { }
 
         public Director(IEnemyBuilder enemyBuilder) : this(new DefaultHeroBuilder(), enemyBuilder) { }
 
