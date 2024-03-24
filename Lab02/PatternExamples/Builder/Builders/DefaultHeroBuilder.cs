@@ -58,7 +58,7 @@ namespace Builder.Builders
             return this;
         }
 
-        public IHeroBuilder SetHeroListOfGoodThingsDone(List<string> listOfThings)
+        public IHeroBuilder SetListOfGoodThingsDone(List<string> listOfThings)
         {
             var hero = (Hero)_humanoidEntity;
             hero.ListOfGoodThingsDone = listOfThings;

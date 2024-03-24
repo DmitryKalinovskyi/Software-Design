@@ -2,6 +2,6 @@
 {
     public interface IHeroBuilder : IHumanoidEntityBuilder
     {
-        public IHeroBuilder SetHeroListOfGoodThingsDone(List<string> listOfThings);
+        public IHeroBuilder SetListOfGoodThingsDone(List<string> listOfThings);
     }
 }

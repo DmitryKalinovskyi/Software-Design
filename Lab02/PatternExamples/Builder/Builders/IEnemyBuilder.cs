@@ -2,6 +2,6 @@
 {
     public interface IEnemyBuilder : IHumanoidEntityBuilder
     {
-        public IEnemyBuilder SetEnemyListOfBadThingsDone(List<string> listOfThings);
+        public IEnemyBuilder SetListOfBadThingsDone(List<string> listOfThings);
     }
 }

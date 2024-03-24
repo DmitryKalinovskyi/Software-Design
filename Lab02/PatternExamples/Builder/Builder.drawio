@@ -1,0 +1,244 @@
+<mxfile host="app.diagrams.net" modified="2024-03-24T20:12:36.460Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="KqXFIGe7izQoDw2mjNzO" version="24.1.0" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1912" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-0" value="&lt;&lt;interface&gt;&gt;&#xa;IHumanoidEntityBuilder" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="551" y="510" width="310" height="410" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-1" value="+ SetName(name): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="40" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-9" value="+ SetEyes(eyes): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="66" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-11" value="+ SetHair(hair): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="92" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-10" value="+ SetBoots(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="118" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-12" value="+ SetHat(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="144" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-13" value="+ SetUpperBodyPart(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="170" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-14" value="+ SetPants(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="196" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-15" value="+ SetPants(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="222" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-16" value="+ SetMaxHitpoins(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="248" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-17" value="+ SetAgility(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="274" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-18" value="+ SetMeeleStrength(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="300" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-19" value="+ SetMagicStrength(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="326" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-20" value="+ ResetBuilder(): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="352" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-21" value="+ Build(): HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry y="378" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="705" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-22" value="&lt;&lt;interface&gt;&gt;&#xa;IHeroBuilder" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="530" y="1030" width="350" height="92" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-24" value="+ SetListOfGoodThingsDone(listOfThings): IHeroBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-22">
+          <mxGeometry y="40" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-37" target="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1765" y="960" />
+              <mxPoint x="705" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-37" value="&lt;&lt;interface&gt;&gt;&#xa;IEnemyBuilder" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1590" y="1030" width="350" height="92" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-38" value="+ SetListOfBadThingsDone(listOfThings): IEnemyBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-37">
+          <mxGeometry y="40" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-39" target="ziXtSPYwLbpA2QTJT7Ts-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-39" value="DefaultHumanoidEntityBuilder" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1081" y="500" width="320" height="430" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-41" value="# _humanoidEntity: HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="26" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-45" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="52" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-48" value="+ SetName(name): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="60" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-61" value="+ abstract Build(): HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="86" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-60" value="+ abstract ResetBuilder(): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="112" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-59" value="+ SetMagicStrength(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="138" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-58" value="+ SetMeeleStrength(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="164" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-57" value="+ SetAgility(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="190" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-56" value="+ SetMaxHitpoins(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="216" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-55" value="+ SetPants(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="242" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-54" value="+ SetPants(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="268" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-53" value="+ SetUpperBodyPart(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="294" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-52" value="+ SetHat(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="320" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-51" value="+ SetBoots(boots): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="346" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-50" value="+ SetHair(hair): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="372" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-49" value="+ SetEyes(eyes): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry y="398" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="1040" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1430" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-64" target="ziXtSPYwLbpA2QTJT7Ts-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1430" y="1160" />
+              <mxPoint x="1775" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-64" value="DefaultEnemyBuilder" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1270" y="1180" width="320" height="140" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-65" value="# _humanoidEntity: HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry y="26" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-66" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry y="52" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-68" value="+ Build(): HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry y="60" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-69" value="+ ResetBuilder(): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry y="86" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-88" value="+ SetListOfBadThingsDone(listOfThings): IEnemyBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-64">
+          <mxGeometry y="112" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-82" target="ziXtSPYwLbpA2QTJT7Ts-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="1160" />
+              <mxPoint x="705" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-82" target="ziXtSPYwLbpA2QTJT7Ts-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="1040" />
+              <mxPoint x="1241" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-82" value="DefaultHeroBuilder" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="1180" width="320" height="140" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-83" value="# _humanoidEntity: HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-82">
+          <mxGeometry y="26" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-84" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-82">
+          <mxGeometry y="52" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-85" value="+ Build(): HumanoidEntity" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-82">
+          <mxGeometry y="60" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-86" value="+ ResetBuilder(): IHumanoidEntityBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-82">
+          <mxGeometry y="86" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-87" value="+ SetListOfGoodThingsDone(listOfThings): IHeroBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-82">
+          <mxGeometry y="112" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-96" target="ziXtSPYwLbpA2QTJT7Ts-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ziXtSPYwLbpA2QTJT7Ts-96" target="ziXtSPYwLbpA2QTJT7Ts-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="1420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-96" value="Director" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1081" y="1350" width="320" height="140" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-97" value="- _heroBuilder: IHeroBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-96">
+          <mxGeometry y="26" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-102" value="- _enemyBuilder: IEnemyBuilder" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-96">
+          <mxGeometry y="52" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-98" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-96">
+          <mxGeometry y="78" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-99" value="+ BuildMyDreamHero(): Hero" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-96">
+          <mxGeometry y="86" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ziXtSPYwLbpA2QTJT7Ts-100" value="+ BuildMyArchEnemy(): Enemy" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ziXtSPYwLbpA2QTJT7Ts-96">
+          <mxGeometry y="112" width="320" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

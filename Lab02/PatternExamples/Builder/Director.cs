@@ -27,7 +27,7 @@ namespace Builder
         public Hero BuildMyDreamHero()
         {
             var hero = _heroBuilder
-                .SetHeroListOfGoodThingsDone(
+                .SetListOfGoodThingsDone(
                 new()
                 {
                     "SOLID principles are often used.",
@@ -56,7 +56,7 @@ namespace Builder
         public Enemy BuildArchEnemy()
         {
             var enemy = _enemyBuilder
-                .SetEnemyListOfBadThingsDone(
+                .SetListOfBadThingsDone(
                 new()
                 {
                     "Ignore SOLID principles.",

@@ -58,7 +58,7 @@ namespace Builder.Builders
             return this;
         }
 
-        public IEnemyBuilder SetEnemyListOfBadThingsDone(List<string> listOfThings)
+        public IEnemyBuilder SetListOfBadThingsDone(List<string> listOfThings)
         {
             var enemy = (Enemy)_humanoidEntity;
             enemy.ListOfBadThingsDone = listOfThings;
