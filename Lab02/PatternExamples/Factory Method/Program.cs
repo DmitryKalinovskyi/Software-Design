@@ -39,3 +39,8 @@ var app = new MobileApp(testSubscriptionService);
 app.MakePremiumSubscription(me);
 
 website.ShowSubscriptions(me);
+
+
+// notice, that using manager call you can only make or remove subscriptions but no more
+
+// using mobile app or website you can manage subscriptions and view content (channels)

@@ -55,5 +55,7 @@ namespace Factory_Method.Clients
 
             DisplayMessageBox("subscription removed.");
         }
+
+        // TODO: methods to render channels content.
     }
 }

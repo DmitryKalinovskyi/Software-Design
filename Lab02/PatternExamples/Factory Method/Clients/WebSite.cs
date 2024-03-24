@@ -66,5 +66,7 @@ namespace Factory_Method.Clients
                 Console.WriteLine(subscription.GetInfo());
             }
         }
+
+        // TODO: methods to render channels content.
     }
 }

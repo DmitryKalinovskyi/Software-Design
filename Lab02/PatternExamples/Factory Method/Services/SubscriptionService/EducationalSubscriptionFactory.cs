@@ -6,7 +6,7 @@ namespace Factory_Method.Services.SubscriptionService
     {
         public ISubscription CreateSubscription()
         {
-            // here you can it from configuration file, where specified the conditions for the subscribtion.
+            // here you can build subscription from configuration file, where specified the conditions for it.
 
             // for channels you can made another service, that allow from string get the channel with respecting source.
             // 
