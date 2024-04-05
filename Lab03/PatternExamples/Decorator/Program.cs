@@ -16,11 +16,11 @@ Console.WriteLine(decoratedMage.GetInfo());
 /* another example of pattern use:
  * 
  * suppose you have IService and some implementation for that interface.
- * you can to test memory usage, time usage and network usage
+ * you need to test memory usage, time usage and network usage
  * 
  * then you just write a decorator for IService, abstract class ServiceDecorator for example
  * then you write several classes for each characteristic you want to measure
  * TimeMeasureDecorator
  * MemoryMeasureDecorator
- * NetworkMeauseDecorator
+ * NetworkMeasureDecorator
  */
