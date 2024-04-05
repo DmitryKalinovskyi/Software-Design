@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Bridge.Renderer;
+﻿using Bridge.Renderer;
 using Bridge.Shapes;
 
 
@@ -8,13 +7,16 @@ var rectangle = new Rectangle();
 var triangle = new Triangle();
 
 
-IShapeRenderer bitmapRenderer = new BitmapRenderer(circle);
+ShapeRenderer bitmapRenderer = new BitmapRenderer(circle);
 bitmapRenderer.Render();
 
-IShapeRenderer bitmapRenderer2 = new BitmapRenderer(rectangle);
+ShapeRenderer bitmapRenderer2 = new BitmapRenderer(rectangle);
 bitmapRenderer2.Render();
 
-IShapeRenderer vectorRenderer = new VectorRenderer(triangle);
+ShapeRenderer vectorRenderer = new VectorRenderer(triangle);
 vectorRenderer.Render();
 
 
+/* In this context bridge pattern allow user to separate the render process with definition of shapes.
+ * 
+ */

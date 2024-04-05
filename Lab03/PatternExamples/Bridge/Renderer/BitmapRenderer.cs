@@ -8,18 +8,14 @@ using System.Threading.Tasks;
 
 namespace Bridge.Renderer
 {
-    public class BitmapRenderer : IShapeRenderer
+    public class BitmapRenderer : ShapeRenderer
     {
-        protected IShape _shape;
+        public BitmapRenderer() { }
+        public BitmapRenderer(IShape shape) : base(shape){ }
 
-        public BitmapRenderer(IShape shape)
+        public override void Render()
         {
-            _shape = shape;
-        }
-
-        public void Render()
-        {
-            Console.WriteLine($"Rendering as bitmap: {_shape.GetRenderInfo()}");
+            Console.WriteLine($"Rendering as bitmap: {shape?.GetRenderInfo()}");
         }
     }
 }

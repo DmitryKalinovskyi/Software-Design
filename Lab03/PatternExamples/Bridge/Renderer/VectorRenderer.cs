@@ -7,18 +7,14 @@ using System.Threading.Tasks;
 
 namespace Bridge.Renderer
 {
-    public class VectorRenderer : IShapeRenderer
+    public class VectorRenderer : ShapeRenderer
     {
-        protected IShape _shape;
+        public VectorRenderer() { }
+        public VectorRenderer(IShape shape) : base(shape) { }
 
-        public VectorRenderer(IShape shape)
+        public override void Render()
         {
-            _shape = shape;
-        }
-
-        public void Render()
-        {
-            Console.WriteLine($"Render as vector image: {_shape.GetRenderInfo()}");
+            Console.WriteLine($"Render as vector image: {shape?.GetRenderInfo()}");
         }
     }
 }
