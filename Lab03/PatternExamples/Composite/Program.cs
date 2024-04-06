@@ -5,7 +5,7 @@ var root = new LightElementNode("body");
 LightNode GenerateList(IEnumerable<string> listItems)
 {
     var ol = new LightElementNode("ol");
-    foreach(var item in listItems)
+    foreach (var item in listItems)
     {
         var li = new LightElementNode("li");
         li.Children.Add(new LightTextNode(item));
@@ -20,7 +20,7 @@ var orderedList = GenerateList(new List<string> { "C#", "C++", "JavaScript", "Ty
 
 root.Children.Add(orderedList);
 
-foreach(var htmlLine in root.GetLazyOuterHTML())
+foreach (var htmlLine in root.GetLazyOuterHTML())
 {
     Console.WriteLine(htmlLine);
 }

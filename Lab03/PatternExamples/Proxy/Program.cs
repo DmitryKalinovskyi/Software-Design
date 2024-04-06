@@ -23,7 +23,7 @@ try
     checkerWithSecurity.GetFileContent();
     checkerWithSecurity.CloseFile();
 }
-catch(Exception ex)
+catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }

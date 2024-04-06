@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proxy
+﻿namespace Proxy
 {
-    public class SmartTextReader: ISmartTextReader
+    public class SmartTextReader : ISmartTextReader
     {
         private StreamReader? _streamReader;
 
@@ -18,7 +12,7 @@ namespace Proxy
         /// Creates SmartTextReader and open's file with given path.
         /// </summary>
         /// <param name="path"></param>
-        public SmartTextReader(string path) 
+        public SmartTextReader(string path)
         {
             OpenFile(path);
         }
@@ -46,7 +40,7 @@ namespace Proxy
 
         public string[] GetFileContent()
         {
-            if( _streamReader == null)
+            if (_streamReader == null)
             {
                 throw new InvalidOperationException("Please open file before getting the content.");
             }

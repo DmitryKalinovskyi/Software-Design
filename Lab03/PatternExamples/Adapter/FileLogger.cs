@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adapter
+﻿namespace Adapter
 {
     // Logger adapter to FileWriter
-    public class FileLogger: ILogger
+    public class FileLogger : ILogger
     {
         // adaptee
         private FileWriter _fileWriter;

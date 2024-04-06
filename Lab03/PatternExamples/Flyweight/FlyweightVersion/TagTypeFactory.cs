@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Flyweight.FlyweightVersion
+﻿namespace Flyweight.FlyweightVersion
 {
     /// <summary>
     /// Allow to receive TagType by properties.
@@ -15,14 +9,14 @@ namespace Flyweight.FlyweightVersion
         // when we have 2 TagTypes with the same properties, they will have the same hashcode, but different references.
         private Dictionary<TagType, TagType> _cachedTagTypes;
 
-        public TagTypeFactory() 
+        public TagTypeFactory()
         {
             _cachedTagTypes = new();
         }
 
         public TagType GetCached(TagType tagType)
         {
-            if(_cachedTagTypes.ContainsKey(tagType))
+            if (_cachedTagTypes.ContainsKey(tagType))
                 // we already have tagType with the same properties inside cache.
                 return _cachedTagTypes[tagType];
 

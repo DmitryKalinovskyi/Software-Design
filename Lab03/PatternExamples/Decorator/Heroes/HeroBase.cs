@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Decorator.Heroes
+﻿namespace Decorator.Heroes
 {
-    public abstract class HeroBase: IHero
+    public abstract class HeroBase : IHero
     {
-        public string Name { get; set; }    
+        public string Name { get; set; }
 
         public HeroBase()
         {

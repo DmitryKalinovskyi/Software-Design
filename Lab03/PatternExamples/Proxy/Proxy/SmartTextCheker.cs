@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proxy.Proxy
+﻿namespace Proxy.Proxy
 {
-    public class SmartTextCheker: ISmartTextReader
+    public class SmartTextCheker : ISmartTextReader
     {
         private ISmartTextReader _reader;
 
@@ -35,7 +29,7 @@ namespace Proxy.Proxy
             Console.WriteLine($"Total count of rows: {content.Length}");
 
             int characters = 0;
-            foreach(var line in content)
+            foreach (var line in content)
             {
                 characters += line.Length;
             }

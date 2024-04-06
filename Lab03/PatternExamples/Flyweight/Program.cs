@@ -1,8 +1,6 @@
 ﻿using Flyweight.Core;
 using Flyweight.LightHTMLReaders;
-using System;
 using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
 
 long GetRAM()
 {
@@ -13,9 +11,9 @@ long GetRAM()
 void ShowLightHTMLPreview(LightNode lightNode, int lines = 10)
 {
     int i = 0;
-    foreach(var line in lightNode.GetLazyOuterHTML())
+    foreach (var line in lightNode.GetLazyOuterHTML())
     {
-        if(i >= lines)
+        if (i >= lines)
         {
             break;
         }
@@ -53,15 +51,17 @@ var task2 = new Task(() =>
     long ramAfter = GetRAM();
 
     long used = ramAfter - ramBefore;
+
     Console.WriteLine($"Count of cached elements: {htmlReader.TagTypeFactory.CountOfCachedTags}");
-    foreach( var tagType in htmlReader.TagTypeFactory.GetCachedTags())
+    foreach (var tagType in htmlReader.TagTypeFactory.GetCachedTags())
     {
         Console.WriteLine(tagType.GetInfo());
     }
+
+    // around 1 mb
     Console.WriteLine($"USED RAM: {used}");
     ShowLightHTMLPreview(root);
 
-    // around 1 mb
 });
 
 task1.Start();

@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Composite.Core
+﻿namespace Composite.Core
 {
-    public class LightElementNode: LightNode
+    public class LightElementNode : LightNode
     {
 
         private string _tagName = "";
-        public string TagName 
-        { 
+        public string TagName
+        {
             get => _tagName;
             set
             {
@@ -60,12 +53,12 @@ namespace Composite.Core
 
         public override string GetInnerHTML()
         {
-            return string.Join("", GetLazyInnerHTML());   
+            return string.Join("", GetLazyInnerHTML());
         }
 
         public override string GetOuterHTML()
         {
-            return string.Join("", GetLazyOuterHTML());   
+            return string.Join("", GetLazyOuterHTML());
         }
 
         protected virtual string GetHead()
@@ -79,7 +72,7 @@ namespace Composite.Core
 
             foreach (var child in Children)
             {
-                foreach(var htmlLine in child.GetLazyOuterHTML())
+                foreach (var htmlLine in child.GetLazyOuterHTML())
                 {
                     yield return htmlLine;
                 }
@@ -95,9 +88,9 @@ namespace Composite.Core
                 yield break;
             }
 
-            foreach(var htmlLine in GetLazyInnerHTML())
+            foreach (var htmlLine in GetLazyInnerHTML())
             {
-                yield return htmlLine; 
+                yield return htmlLine;
             }
 
             yield return $"</{TagName}>";

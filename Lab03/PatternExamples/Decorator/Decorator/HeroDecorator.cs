@@ -1,13 +1,8 @@
 ﻿using Decorator.Heroes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Decorator.Decorator
 {
-    public abstract class HeroDecorator: IHero
+    public abstract class HeroDecorator : IHero
     {
         private IHero _hero { get; set; }
 

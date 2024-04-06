@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bridge.Shapes
+﻿namespace Bridge.Shapes
 {
-    public class Circle: IShape
+    public class Circle : IShape
     {
         public int X { get; set; }
         public int Y { get; set; }
