@@ -8,7 +8,7 @@ long GetRAM()
     return currentProcess.WorkingSet64;
 }
 
-void ShowLightHTMLPreview(LightNode lightNode, int lines = 10)
+void ShowLightHTMLPreview(LightNode lightNode, int lines = 5)
 {
     int i = 0;
     foreach (var line in lightNode.GetLazyOuterHTML())
@@ -22,13 +22,14 @@ void ShowLightHTMLPreview(LightNode lightNode, int lines = 10)
 
         i++;
     }
+    Console.WriteLine("...");
 }
 
 string bookPath = "./book.txt";
 
 var task1 = new Task(() =>
 {
-
+    Console.WriteLine("Without flyweight pattern");
     // test without flyweight pattern.
     long ramBefore = GetRAM();
     var htmlReader = new LightHTMLReader();
@@ -36,7 +37,9 @@ var task1 = new Task(() =>
     long ramAfter = GetRAM();
 
     long used = ramAfter - ramBefore;
-    Console.WriteLine($"USED RAM: {used}");
+    Console.WriteLine($"USED RAM: {used}"); 
+    Console.WriteLine("\nPreview: ");
+
     ShowLightHTMLPreview(root);
 
     // around 2.7 mb
@@ -44,6 +47,8 @@ var task1 = new Task(() =>
 
 var task2 = new Task(() =>
 {
+    Console.WriteLine("Using flyweight pattern:");
+
     // flyweight pattern
     long ramBefore = GetRAM();
     var htmlReader = new LightHTMLReader_Flyweight();
@@ -60,11 +65,15 @@ var task2 = new Task(() =>
 
     // around 1 mb
     Console.WriteLine($"USED RAM: {used}");
+    Console.WriteLine("\nPreview: ");
     ShowLightHTMLPreview(root);
 
 });
 
 task1.Start();
 task1.Wait();
+
+Console.WriteLine("\n--------------------------------------------------");
+
 task2.Start();
 task2.Wait();
