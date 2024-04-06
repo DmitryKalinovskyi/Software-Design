@@ -1,4 +1,5 @@
-﻿using Flyweight.LightHTMLReaders;
+﻿using Flyweight.Core;
+using Flyweight.LightHTMLReaders;
 using System;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
@@ -7,6 +8,22 @@ long GetRAM()
 {
     Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
     return currentProcess.WorkingSet64;
+}
+
+void ShowLightHTMLPreview(LightNode lightNode, int lines = 10)
+{
+    int i = 0;
+    foreach(var line in lightNode.GetLazyOuterHTML())
+    {
+        if(i >= lines)
+        {
+            break;
+        }
+
+        Console.WriteLine(line);
+
+        i++;
+    }
 }
 
 string bookPath = "./book.txt";
@@ -22,6 +39,7 @@ var task1 = new Task(() =>
 
     long used = ramAfter - ramBefore;
     Console.WriteLine($"USED RAM: {used}");
+    ShowLightHTMLPreview(root);
 
     // around 2.7 mb
 });
@@ -41,6 +59,7 @@ var task2 = new Task(() =>
         Console.WriteLine(tagType.GetInfo());
     }
     Console.WriteLine($"USED RAM: {used}");
+    ShowLightHTMLPreview(root);
 
     // around 1 mb
 });
