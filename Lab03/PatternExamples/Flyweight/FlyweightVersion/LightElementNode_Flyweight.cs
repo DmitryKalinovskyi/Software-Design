@@ -6,34 +6,24 @@ namespace Flyweight.FlyweightVersion
     {
         public TagType TagType { get; set; }
 
-        public HashSet<string> CSSClassList { get; set; }
+        public List<string> CSSClassList { get; set; }
 
         public List<LightNode> Children { get; set; }
 
         public LightElementNode_Flyweight()
         {
             TagType = TagType.Undefined;
-            CSSClassList = new HashSet<string>();
+            CSSClassList = new();
             Children = new List<LightNode>();
         }
 
-        public LightElementNode_Flyweight(TagType tagType)
-        {
-            TagType = tagType;
-            CSSClassList = new();
-            Children = new();
-        }
+        public LightElementNode_Flyweight(TagType tagType) : this(tagType, new(), new()) { }
 
-        public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList)
-        {
-            TagType = tagType;
-            CSSClassList = new(cSSClassList);
-            Children = new();
-        }
+        public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList): this(tagType, cSSClassList, new()) { }
 
         public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList, List<LightNode> children)
         {
-            TagType = tagType;
+            TagType = TagTypeFactory.Instance.GetCached(tagType);
             CSSClassList = new(cSSClassList);
             Children = children;
         }
@@ -50,7 +40,7 @@ namespace Flyweight.FlyweightVersion
 
         protected virtual string GetHead()
         {
-            return $"<{TagType.TagName} class=\"{string.Join(' ', CSSClassList)}\">";
+            return $"<{(TagType.IsSemantic ? '!' : ' ')}{TagType.TagName} class=\"{string.Join(' ', CSSClassList)}\">";
         }
 
         public override IEnumerable<string> GetLazyInnerHTML()
