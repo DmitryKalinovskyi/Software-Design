@@ -64,7 +64,7 @@
 
         protected virtual string GetHead()
         {
-            return $"<{(IsSemantic ? '!': ' ')}{TagName} class=\"{string.Join(' ', CSSClassList)}\">";
+            return $"<{(IsSemantic ? '!' : ' ')}{TagName} class=\"{string.Join(' ', CSSClassList)}\">";
         }
 
         public override IEnumerable<string> GetLazyInnerHTML()

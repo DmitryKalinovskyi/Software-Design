@@ -19,7 +19,7 @@ namespace Flyweight.FlyweightVersion
 
         public LightElementNode_Flyweight(TagType tagType) : this(tagType, new(), new()) { }
 
-        public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList): this(tagType, cSSClassList, new()) { }
+        public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList) : this(tagType, cSSClassList, new()) { }
 
         public LightElementNode_Flyweight(TagType tagType, List<string> cSSClassList, List<LightNode> children)
         {

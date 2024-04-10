@@ -1,7 +1,6 @@
 ﻿using Flyweight.Core;
 using Flyweight.FlyweightVersion;
 using Flyweight.LightHTMLReaders;
-using System.Diagnostics;
 
 long GetRAM()
 {
@@ -56,7 +55,7 @@ var task1 = new Task(() =>
 var task2 = new Task(() =>
 {
     Console.WriteLine("Using flyweight pattern:");
-    
+
     // around 1.53 mb
     MeasureLightHTMLRam(new LightHTMLReader_Flyweight(), bookPath);
 
