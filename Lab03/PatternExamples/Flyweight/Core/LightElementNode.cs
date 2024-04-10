@@ -14,6 +14,8 @@
 
         public bool IsSelfClosing { get; set; }
 
+        public bool IsSemantic { get; set; }
+
         public List<string> CSSClassList { get; set; }
 
         public List<LightNode> Children { get; set; }
@@ -62,7 +64,7 @@
 
         protected virtual string GetHead()
         {
-            return $"<{TagName} class=\"{string.Join(' ', CSSClassList)}\">";
+            return $"<{(IsSemantic ? '!': ' ')}{TagName} class=\"{string.Join(' ', CSSClassList)}\">";
         }
 
         public override IEnumerable<string> GetLazyInnerHTML()

@@ -5,11 +5,15 @@
     /// </summary>
     public class TagTypeFactory
     {
+        public static TagTypeFactory Instance => _lazyInstance.Value;
+
+        private static Lazy<TagTypeFactory> _lazyInstance = new(() => new TagTypeFactory());
+
         // how this works? TagType have overriden GetHashCode and Equals methods, that used inside dictionary.
         // when we have 2 TagTypes with the same properties, they will have the same hashcode, but different references.
         private Dictionary<TagType, TagType> _cachedTagTypes;
 
-        public TagTypeFactory()
+        private TagTypeFactory()
         {
             _cachedTagTypes = new();
         }

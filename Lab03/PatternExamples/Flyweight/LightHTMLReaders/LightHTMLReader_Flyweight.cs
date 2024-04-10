@@ -5,18 +5,10 @@ namespace Flyweight.LightHTMLReaders
 {
     public class LightHTMLReader_Flyweight : ILightHTMLReader
     {
-        public TagTypeFactory TagTypeFactory { get; private set; }
-
-        public LightHTMLReader_Flyweight()
-        {
-            TagTypeFactory = new TagTypeFactory();
-        }
-
-
         public LightNode ReadLightHTML(string path)
         {
             using var sr = new StreamReader(path);
-            var root = new LightElementNode_Flyweight(TagTypeFactory.GetCached(new TagType("root")));
+            var root = new LightElementNode_Flyweight(new TagType("root"));
 
             bool firstLineReaded = false;
 
@@ -28,20 +20,20 @@ namespace Flyweight.LightHTMLReaders
                 LightElementNode_Flyweight node;
                 if (firstLineReaded == false)
                 {
-                    node = new LightElementNode_Flyweight(TagTypeFactory.GetCached(new TagType("h1")));
+                    node = new LightElementNode_Flyweight(new TagType("h1"));
                     firstLineReaded = true;
                 }
                 else if (line.Length < 20)
                 {
-                    node = new LightElementNode_Flyweight(TagTypeFactory.GetCached(new TagType("h2")));
+                    node = new LightElementNode_Flyweight(new TagType("h2"));
                 }
                 else if (line[0] == ' ')
                 {
-                    node = new LightElementNode_Flyweight(TagTypeFactory.GetCached(new TagType("blockquote")));
+                    node = new LightElementNode_Flyweight(new TagType("blockquote"));
                 }
                 else
                 {
-                    node = new LightElementNode_Flyweight(TagTypeFactory.GetCached(new TagType("p")));
+                    node = new LightElementNode_Flyweight(new TagType("p"));
 
                 }
 

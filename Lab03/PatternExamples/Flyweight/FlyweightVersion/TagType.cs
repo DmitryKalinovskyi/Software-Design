@@ -4,40 +4,37 @@
     {
         public static TagType Undefined = new();
 
-        private string _tagName = "";
-        public string TagName
-        {
-            get => _tagName;
-            set
-            {
-                _tagName = value.ToLower();
-            }
-        }
+        public readonly string TagName;
 
-        public bool IsSelfClosing { get; set; }
+        public readonly bool IsSelfClosing;
+
+        public readonly bool IsSemantic;
 
         public TagType()
         {
             TagName = "?";
             IsSelfClosing = false;
+            IsSemantic = false;
         }
 
-        public TagType(string tagName, bool isSelfClosing = false)
+        public TagType(string tagName, bool isSelfClosing = false, bool isSemantic = false)
         {
-            TagName = tagName;
+            TagName = tagName.ToLower();
             IsSelfClosing = isSelfClosing;
+            IsSemantic = isSemantic;
         }
 
         public string GetInfo()
         {
-            return $"Tag: {_tagName} - {(IsSelfClosing ? "Self-Closing" : "Not self-closing")}";
+            return $"Tag: {TagName} - {(IsSelfClosing ? "Self-Closing" : "Not self-closing")}, semantic - {IsSemantic}";
         }
 
         // especially for cache factory
         public override int GetHashCode()
         {
-            return _tagName.GetHashCode() * 17
-                ^ IsSelfClosing.GetHashCode() * 31;
+            return TagName.GetHashCode() * 17
+                ^ IsSelfClosing.GetHashCode() * 31
+                ^ IsSemantic.GetHashCode() * 37;
         }
 
         public override bool Equals(object? obj)
@@ -49,7 +46,8 @@
             var otherTag = (TagType)obj;
 
             return otherTag.IsSelfClosing == IsSelfClosing &&
-                otherTag._tagName == _tagName;
+                otherTag.TagName == TagName &&
+                otherTag.IsSemantic == IsSemantic;
         }
     }
 }
