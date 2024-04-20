@@ -1,4 +1,4 @@
-﻿using Memento.Attributes;
+﻿using Memento.Editor.Memento.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,6 @@ namespace Memento.Editor
     {
         [MementoField]
         private TextDocument _textDocument;
-
-        [MementoField]
-        private int position { get; set; }
 
         public TextEditor()
         {

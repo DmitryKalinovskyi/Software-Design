@@ -6,47 +6,46 @@ using System.Threading.Tasks;
 
 namespace Memento.Editor
 {
-    public class TextEditorCaretaker
+    public class TextEditorCaretaker(TextEditor originator)
     {
-        //private List<TextEditor.EditorSnapshot> _history;
+        private readonly List<TextEditor.EditorSnapshot> _history = [];
 
-        //private TextEditor _originator;
+        public readonly TextEditor Originator = originator;
 
-        //public TextEditorCaretaker(TextEditor originator)
-        //{
-        //    _originator = originator;
-        //    _history = new();
-        //}
+        public void Save()
+        {
+            _history.Add(Originator.GetSnapshot());
+        }
 
-        //public void Save()
-        //{
-        //    _history.Add(_originator.GetSnapshot());
-        //}
+        public void Undo()
+        {
+            if (_history.Count == 0)
+            {
+                throw new InvalidOperationException("Can't undo text document.");
+            }
 
-        //public void Undo()
-        //{
-        //    if (_history.Count == 0)
-        //    {
-        //        throw new InvalidOperationException("Can't undo text document.");
-        //    }
+            var memento = _history.Last();
+            _history.RemoveAt(_history.Count - 1);
 
-        //    var memento = _history.Last();
-        //    _history.RemoveAt(_history.Count - 1);
+            Originator.Restore(memento);
+        }
 
-        //    _originator.Restore(memento);
-        //}
+        public void ClearHistory()
+        {
+            _history.Clear();
+        }
 
-        //internal string GetHistoryInfo()
-        //{
-        //    var sb = new StringBuilder();
-        //    sb.AppendLine($"History size: {_history.Count}");
+        internal string GetHistoryInfo()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"History size: {_history.Count}");
 
-        //    foreach (var memento in _history)
-        //    {
-        //        sb.AppendLine(memento.ToString());
-        //    }
+            foreach (var memento in _history)
+            {
+                sb.AppendLine(memento.ToString());
+            }
 
-        //    return sb.ToString();
-        //}
+            return sb.ToString();
+        }
     }
 }

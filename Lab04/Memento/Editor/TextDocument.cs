@@ -8,7 +8,7 @@ namespace Memento.Editor
 {
     public class TextDocument : ICloneable
     {
-        List<string> Text { get; set; }
+        public StringBuilder Text { get; set; }
 
         public TextDocument()
         {
@@ -17,9 +17,49 @@ namespace Memento.Editor
 
         public object Clone()
         {
-            var clone = new TextDocument();
-            clone.Text = Text;
+            var clone = new TextDocument
+            {
+                Text = new StringBuilder(Text.ToString())
+            };
+
             return clone;
+        }
+
+        public int GetNextLine(int startIndex = 0)
+        {
+            while (startIndex < Text.Length)
+            {
+                if (Text[startIndex] == '\n')
+                    return startIndex + 1;
+
+                startIndex++;
+            }
+
+            return -1;
+        }
+
+        public int GetPreviousLine(int startIndex = 0)
+        {
+            int meeted = 0;
+
+            while(startIndex > 0)
+            {
+                if (Text[startIndex] == '\n')
+                {
+                    meeted++;
+                }
+
+                if (meeted == 2) return startIndex + 1;
+
+                startIndex--;
+            }
+
+            return 0;
+        }
+
+        public override string ToString()
+        {
+            return Text.ToString();
         }
     }
 }

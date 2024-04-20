@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Memento.Attributes
+namespace Memento.Editor.Memento.Attributes
 {
-    public class MementoFieldAttribute :Attribute
+    public class MementoFieldAttribute : Attribute
     {
     }
 }

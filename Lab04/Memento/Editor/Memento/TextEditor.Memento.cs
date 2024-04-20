@@ -1,4 +1,4 @@
-﻿using Memento.Attributes;
+﻿using Memento.Editor.Memento.Attributes;
 using System.Reflection;
 
 namespace Memento.Editor
