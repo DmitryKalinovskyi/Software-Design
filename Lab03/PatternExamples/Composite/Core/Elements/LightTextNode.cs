@@ -1,4 +1,4 @@
-﻿namespace Composite.Core
+﻿namespace Composite.Core.Elements
 {
     public class LightTextNode : LightNode
     {

@@ -1,23 +1,38 @@
 ﻿using Composite.Core;
+using Composite.Core.Elements.Image;
 
 var root = new LightElementNode("body");
 
-root.OnClick += (sender, e) =>
+root.Children.Add(new ImageNode("https://google.com/somepicture1"));
+root.Children.Add(new ImageNode("folder1/happy.png", new FileImageSource()));
+
+
+void DisplayLightNode(LightNode lightNode)
 {
-    Console.WriteLine("You clicked to the body!");
-};
+    foreach (var line in lightNode.GetLazyOuterHTML())
+    {
+        Console.WriteLine(line);
+    }
+}
 
-var lambda = (LightElementNode node, EventArgs e) =>
-{
-    Console.WriteLine("This lambda should not be shown in the first time.");
-};
+DisplayLightNode(root);
 
-root.OnClick += lambda;
+//root.OnClick += (sender, e) =>
+//{
+//    Console.WriteLine("You clicked to the body!");
+//};
 
-root.OnClick.Invoke(root, new EventArgs());
+//var lambda = (LightElementNode node, EventArgs e) =>
+//{
+//    Console.WriteLine("This lambda should not be shown in the first time.");
+//};
 
-root.OnClick -= lambda;
-root.OnClick.Invoke(root, new EventArgs());
+//root.OnClick += lambda;
+
+//root.OnClick.Invoke(root, new EventArgs());
+
+//root.OnClick -= lambda;
+//root.OnClick.Invoke(root, new EventArgs());
 
 //LightNode GenerateList(IEnumerable<string> listItems)
 //{
