@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Composite.Core.Elements
+namespace Composite.Core.Elements.Image
 {
-    internal class Image
+    public interface IImageSource
     {
+        public string GetImage(string uri);
     }
 }
