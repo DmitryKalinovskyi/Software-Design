@@ -4,7 +4,7 @@
     {
         public interface IEditorSnapshot { }
 
-        public class EditorSnapshot: IEditorSnapshot
+        public class EditorSnapshot : IEditorSnapshot
         {
             public TextDocument? TextDocument { get; set; }
 

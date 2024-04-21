@@ -1,15 +1,10 @@
 ﻿using Memento.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Memento.Editor
 {
     public partial class TextEditor
     {
-        public class WriteCommand: Command
+        public class WriteCommand : Command
         {
             private readonly TextEditorCaretaker _caretaker;
             public WriteCommand(TextEditorCaretaker caretaker)

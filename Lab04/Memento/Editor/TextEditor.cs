@@ -1,11 +1,4 @@
-﻿using Memento.Editor.Memento.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Memento.Editor
+﻿namespace Memento.Editor
 {
     public partial class TextEditor
     {
@@ -15,7 +8,7 @@ namespace Memento.Editor
 
         public TextEditor()
         {
-            _textDocument = new TextDocument(); 
+            _textDocument = new TextDocument();
         }
     }
 }

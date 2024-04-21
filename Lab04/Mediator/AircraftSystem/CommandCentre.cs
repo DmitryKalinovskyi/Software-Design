@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mediator.AircraftSystem
+﻿namespace Mediator.AircraftSystem
 {
     public class CommandCentre
     {
@@ -55,7 +49,7 @@ namespace Mediator.AircraftSystem
 
         public void TookOffNotify(Aircraft aircraft)
         {
-            if(_tooked.ContainsKey(aircraft) == false)
+            if (_tooked.ContainsKey(aircraft) == false)
                 throw new InvalidOperationException("You can't notify about took off, if you don't even landed in runway");
 
             var runway = _tooked[aircraft];

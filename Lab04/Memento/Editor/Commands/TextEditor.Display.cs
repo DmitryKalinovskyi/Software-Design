@@ -1,9 +1,4 @@
 ﻿using Memento.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Memento.Editor
 {
@@ -12,7 +7,8 @@ namespace Memento.Editor
         public class DisplayCommand : Command
         {
             private readonly TextEditor _originator;
-            public DisplayCommand(TextEditor originator){
+            public DisplayCommand(TextEditor originator)
+            {
                 _originator = originator;
                 Description = "Displays the document.";
             }

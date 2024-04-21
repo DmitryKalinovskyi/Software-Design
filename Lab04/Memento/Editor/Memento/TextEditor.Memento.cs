@@ -1,7 +1,4 @@
-﻿using Memento.Editor.Memento.Attributes;
-using System.Reflection;
-
-namespace Memento.Editor
+﻿namespace Memento.Editor
 {
     public partial class TextEditor
     {

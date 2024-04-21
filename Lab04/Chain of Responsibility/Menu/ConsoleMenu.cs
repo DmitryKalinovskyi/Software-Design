@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chain_of_Responsibility.Menu
+﻿namespace Chain_of_Responsibility.Menu
 {
     public class ConsoleMenu : IMenu
     {
@@ -23,7 +17,7 @@ namespace Chain_of_Responsibility.Menu
 
         public void Select(string optionName)
         {
-            if(_optionBindings.ContainsKey(optionName) == false) 
+            if (_optionBindings.ContainsKey(optionName) == false)
             {
                 throw new InvalidOperationException("You can't choose option that don't present.");
             }
@@ -45,7 +39,7 @@ namespace Chain_of_Responsibility.Menu
         public void RenderOptions()
         {
             int i = 1;
-            foreach(var option in _optionBindings.Keys)
+            foreach (var option in _optionBindings.Keys)
             {
                 Console.WriteLine($"{i}: {option}");
                 i++;
@@ -56,7 +50,7 @@ namespace Chain_of_Responsibility.Menu
         {
             var bindings = new Dictionary<int, string>();
             int i = 1;
-            foreach(var option in _optionBindings.Keys)
+            foreach (var option in _optionBindings.Keys)
             {
                 bindings[i++] = option;
             }
@@ -76,7 +70,7 @@ namespace Chain_of_Responsibility.Menu
                     var option = Console.ReadLine() ?? "";
 
                     // convert to number
-                    if(int.TryParse(option, out int choice))
+                    if (int.TryParse(option, out int choice))
                     {
                         Select(numberBindings[choice]);
                     }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chain_of_Responsibility.Handlers
+﻿namespace Chain_of_Responsibility.Handlers
 {
     /// <summary>
     /// Base handler for the chain of responsibility pattern.
@@ -26,7 +20,7 @@ namespace Chain_of_Responsibility.Handlers
         }
 
         public abstract void Handle(TArg argument);
-        
+
         protected void HandleNext(TArg argument)
         {
             _next?.Handle(argument);

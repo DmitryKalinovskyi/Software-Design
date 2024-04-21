@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Memento.Commands
+﻿namespace Memento.Commands
 {
     // part of code from lab01 https://github.com/DmitryKalinovskyi/Software-Design/blob/main/Lab01/ZooManager/ZooManager/Commands/Command.cs
 

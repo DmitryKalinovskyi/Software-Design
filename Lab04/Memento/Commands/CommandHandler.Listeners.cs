@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Memento.Commands
+﻿namespace Memento.Commands
 {
     public partial class CommandHandler
     {
@@ -18,8 +11,8 @@ namespace Memento.Commands
 
             OnCommandExecute += (sender, args) =>
             {
-                if(command == args.CommandName)
-                listener();
+                if (command == args.CommandName)
+                    listener();
             };
 
             return this;
