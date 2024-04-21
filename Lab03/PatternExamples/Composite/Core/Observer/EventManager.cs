@@ -1,6 +1,6 @@
 ﻿namespace Composite.Core.Observer
 {
-    public class EventManager<TSender, TEventArgs> where TEventArgs : EventArgs 
+    public class EventManager<TSender, TEventArgs> where TEventArgs : EventArgs
     {
         private readonly HashSet<Action<TSender, TEventArgs>> _listeners = new();
 

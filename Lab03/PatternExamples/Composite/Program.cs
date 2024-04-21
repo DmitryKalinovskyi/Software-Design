@@ -9,7 +9,7 @@ root.Children.Add(new ImageNode("folder1/happy.png", new FileImageSource()));
 
 void DisplayLightNode(LightNode lightNode)
 {
-    foreach(var line in lightNode.GetLazyOuterHTML())
+    foreach (var line in lightNode.GetLazyOuterHTML())
     {
         Console.WriteLine(line);
     }
