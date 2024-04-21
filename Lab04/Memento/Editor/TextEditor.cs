@@ -4,7 +4,7 @@
     {
         private TextDocument _textDocument;
 
-        // for poc versiion this is enought.
+        // for poc version this is enought.
 
         public TextEditor()
         {
