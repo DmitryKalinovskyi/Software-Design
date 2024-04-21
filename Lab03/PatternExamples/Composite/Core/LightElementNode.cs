@@ -1,8 +1,7 @@
 ﻿namespace Composite.Core
 {
-    public class LightElementNode : LightNode
+    public partial class LightElementNode : LightNode
     {
-
         private string _tagName = "";
         public string TagName
         {
