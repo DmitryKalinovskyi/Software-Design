@@ -19,9 +19,11 @@ commandHandler.AddCommand("help", new TextEditor.HelpCommand(commandHandler));
 commandHandler.AddCommandListener(["write", "w", "undo"], () =>
 {
     Console.Clear();
+    commandHandler.Execute("help");
     commandHandler.Execute("display");
 });
 
+commandHandler.Execute("help");
 commandHandler.Execute("display");
 
 while (true)

@@ -8,16 +8,11 @@ namespace Chain_of_Responsibility.Menu
 {
     public class ConsoleMenu : IMenu
     {
-        private Dictionary<string, Action> _optionBindings;
-
-        public ConsoleMenu()
-        {
-            _optionBindings = new Dictionary<string, Action>();
-        }
+        private readonly Dictionary<string, Action> _optionBindings = [];
 
         public string[] GetMenuOptions()
         {
-            return _optionBindings.Keys.ToArray();
+            return [.. _optionBindings.Keys];
         }
 
         public IMenu RemoveMenuOption(string optionName)
@@ -57,17 +52,40 @@ namespace Chain_of_Responsibility.Menu
             }
         }
 
+        private Dictionary<int, string> CreateNumberBindings()
+        {
+            var bindings = new Dictionary<int, string>();
+            int i = 1;
+            foreach(var option in _optionBindings.Keys)
+            {
+                bindings[i++] = option;
+            }
+            return bindings;
+        }
+
         public void HandleSelection()
         {
             RenderOptions();
+            var numberBindings = CreateNumberBindings();
+
             while (true)
             {
                 try
                 {
                     Console.WriteLine("Enter option: ");
                     var option = Console.ReadLine() ?? "";
-                    Select(option);
-                    break;
+
+                    // convert to number
+                    if(int.TryParse(option, out int choice))
+                    {
+                        Select(numberBindings[choice]);
+                    }
+                    else
+                    {
+                        Select(option);
+                    }
+
+                    return;
                 }
                 catch
                 {

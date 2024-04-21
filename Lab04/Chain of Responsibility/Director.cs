@@ -13,7 +13,13 @@ namespace Chain_of_Responsibility
         {
             var mainHandler = new ApplicationHandler();
 
-            mainHandler.SetNext(new AnsweringMachineHandler());
+            mainHandler
+                .SetNext(new SupportHandler())
+                .SetNext(new AnsweringMachineHandler())
+                .SetNext(new BankWorkerHandler())
+
+                // to make it circular.
+                .SetNext(mainHandler);
 
             return mainHandler;
         }

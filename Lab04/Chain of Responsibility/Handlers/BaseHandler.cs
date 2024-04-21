@@ -31,6 +31,5 @@ namespace Chain_of_Responsibility.Handlers
         {
             _next?.Handle(argument);
         }
-
     }
 }
