@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace Memento.Commands
 {
     // part of code from lab01 https://github.com/DmitryKalinovskyi/Software-Design/blob/main/Lab01/ZooManager/ZooManager/Commands/CommandHandler.cs
-    public class CommandHandler
+    // extended with command listener
+    public partial class CommandHandler
     {
         private readonly Dictionary<string, Command> _commands;
+
+        public event EventHandler<CommandArgs> OnCommandExecute;
 
         public CommandHandler()
         {
@@ -30,11 +33,15 @@ namespace Memento.Commands
 
         public void Execute(string[] commandTokens)
         {
-            var commandName = commandTokens[0];
+            if (commandTokens.Length == 0)
+                throw new ArgumentException("Command not specified.");
 
-            if (_commands.ContainsKey(commandName))
+            var commandArgs = new CommandArgs(commandTokens[0], commandTokens[1..]);
+            if (_commands.ContainsKey(commandArgs.CommandName))
             {
-                _commands[commandName].Execute(commandTokens[1..]);
+                _commands[commandArgs.CommandName].Execute(commandArgs.Parameters);
+
+                OnCommandExecute?.Invoke(this, commandArgs);
             }
             else
             {

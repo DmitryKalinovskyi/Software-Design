@@ -8,7 +8,7 @@ namespace Memento.Editor
 {
     public class TextEditorCaretaker(TextEditor originator)
     {
-        private readonly List<TextEditor.EditorSnapshot> _history = [];
+        private readonly List<TextEditor.IEditorSnapshot> _history = [];
 
         public readonly TextEditor Originator = originator;
 

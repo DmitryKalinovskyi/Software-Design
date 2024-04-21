@@ -2,7 +2,12 @@
 {
     public partial class TextEditor
     {
-        public class EditorSnapshot
+        public interface IEditorSnapshot
+        {
+            
+        }
+
+        public class EditorSnapshot: IEditorSnapshot
         {
             public TextDocument? TextDocument { get; set; }
 
