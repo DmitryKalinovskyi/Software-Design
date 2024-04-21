@@ -17,16 +17,15 @@ namespace Memento.Editor
 
         public void Restore(IEditorSnapshot snapshot)
         {
-            if (snapshot is EditorSnapshot snap)
+            if (snapshot is EditorSnapshot fullSnapshot)
             {
-                _textDocument = snap.TextDocument ?? _textDocument;
+                _textDocument = fullSnapshot.TextDocument ?? _textDocument;
             }
             else
                 throw new ArgumentException("Can't restore from that snapshot.");
         }
 
-
-        // this was attemp to do this with reflection, 
+        // this was attemp to do this with reflection
 
         //public EditorSnapshot GetSnapshot()
         //{

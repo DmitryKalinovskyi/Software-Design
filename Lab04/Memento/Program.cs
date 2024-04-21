@@ -14,11 +14,12 @@ commandHandler.AddAlias("write", "w");
 commandHandler.AddCommand("display", new TextEditor.DisplayCommand(editor));
 commandHandler.AddCommand("undo", new TextEditor.UndoCommand(editorCaretaker));
 
+commandHandler.AddCommand("help", new TextEditor.HelpCommand(commandHandler));
+
 commandHandler.AddCommandListener(["write", "w", "undo"], () =>
 {
     Console.Clear();
     commandHandler.Execute("display");
-
 });
 
 commandHandler.Execute("display");
@@ -38,3 +39,5 @@ while (true)
         Console.WriteLine($"Exception: {e.Message}");
     }
 }
+
+// this is short example of memento usage.

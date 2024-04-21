@@ -9,8 +9,9 @@ namespace Memento.Editor
 {
     public partial class TextEditor
     {
-        [MementoField]
         private TextDocument _textDocument;
+
+        // for poc versiion this is enought.
 
         public TextEditor()
         {

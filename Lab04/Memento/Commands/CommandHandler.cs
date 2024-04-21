@@ -12,11 +12,11 @@ namespace Memento.Commands
     {
         private readonly Dictionary<string, Command> _commands;
 
-        public event EventHandler<CommandArgs> OnCommandExecute;
+        public event EventHandler<CommandArgs>? OnCommandExecute;
 
         public CommandHandler()
         {
-            _commands = new();
+            _commands = [];
         }
 
         public string[] Tokenize(string? command)
