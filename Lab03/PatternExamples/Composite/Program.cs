@@ -23,12 +23,18 @@ var orderedList = GenerateList(new List<string> { "C#", "C++", "JavaScript", "Ty
 
 root.Children.Add(orderedList);
 
-var iterator = root.GetDFSIterator();
-
-foreach(var item in iterator)
+Console.WriteLine("DFS Iterator:");
+foreach(var item in root.GetDFSIterator())
 {
     Console.WriteLine(item.GetOuterHTML());
 }
+
+Console.WriteLine("BFS Iterator:");
+foreach(var item in root.GetBFSIterator())
+{
+    Console.WriteLine(item.GetOuterHTML());
+}
+
 //void DemonstrateStrategy()
 //{
 //    var root = new LightElementNode("body");

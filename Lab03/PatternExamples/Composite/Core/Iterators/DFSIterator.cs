@@ -16,16 +16,23 @@ namespace Composite.Core.Iterators
             _enumerator = DFSGenerator(root).GetEnumerator();
         }
 
+        /// <summary>
+        /// Recursive enumerator (generator), that implements depth-first search traversal in the lightHtml.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         private IEnumerable<LightNode> DFSGenerator(LightNode node)
         {
             // start from the root node
             yield return node;
 
+            // we can use only LightElementNode, because it's base class for all composite elements.
             if(node is LightElementNode lightElementNode)
             {
                 // then iterate by child
                 foreach(var child in lightElementNode.Children)
                 {
+                    
                     foreach(var c in DFSGenerator(child))
                     {
                         yield return c;

@@ -9,31 +9,42 @@ namespace Composite.Core.Iterators
 {
     public class BFSIterator : ILightHTMLIterator
     {
-        private LightElementNode _root;
+        private IEnumerator<LightNode> _enumerator;
 
         public BFSIterator(LightElementNode root)
         {
-            _root = root;
+            _enumerator = BFSGenerator(root).GetEnumerator();
+        }
+
+        private IEnumerable<LightNode> BFSGenerator(LightNode node)
+        {
+            var queue = new Queue<LightNode>();
+            queue.Enqueue(node);
+
+            while(queue.Count > 0)
+            {
+                var front = queue.Dequeue();
+                yield return front;
+
+                // add children to the queue
+                if(front is LightElementNode lightElementNode)
+                {
+                    foreach(var child in lightElementNode.Children)
+                    {
+                        queue.Enqueue(child);
+                    }
+                }
+            }
         }
 
         public IEnumerator<LightNode> GetEnumerator()
         {
-            throw new NotImplementedException();
-        }
-
-        public LightNode? GetNext()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool HasNext()
-        {
-            throw new NotImplementedException();
+            return _enumerator;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return _enumerator;
         }
     }
 
