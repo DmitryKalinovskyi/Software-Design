@@ -2,22 +2,22 @@
 {
     public partial class LightElementNode : LightNode
     {
-        public List<LightNode> Children { get; set; }
+        public List<LightElementNode> Children { get; set; }
 
         public LightElementNode()
         {
             TagName = "?";
             IsSelfClosing = false;
-            Children = new List<LightNode>();
+            Children = new List<LightElementNode>();
         }
 
         public LightElementNode(string tagName, bool isSelfClosing = false)
             : this(tagName, isSelfClosing, Enumerable.Empty<string>()) { }
 
         public LightElementNode(string tagName, bool isSelfClosing, IEnumerable<string> cSSClassList)
-            : this(tagName, isSelfClosing, cSSClassList, Enumerable.Empty<LightNode>()){ }
+            : this(tagName, isSelfClosing, cSSClassList, Enumerable.Empty<LightElementNode>()){ }
 
-        public LightElementNode(string tagName, bool isSelfClosing, IEnumerable<string> cSSClassList, IEnumerable<LightNode> children)
+        public LightElementNode(string tagName, bool isSelfClosing, IEnumerable<string> cSSClassList, IEnumerable<LightElementNode> children)
             : base(tagName, isSelfClosing, cSSClassList) 
         {
             Children = new(children);

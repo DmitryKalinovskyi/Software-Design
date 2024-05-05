@@ -21,15 +21,15 @@ namespace Composite.Core.Iterators
             var queue = new Queue<LightNode>();
             queue.Enqueue(node);
 
-            while(queue.Count > 0)
+            while (queue.Count > 0)
             {
                 var front = queue.Dequeue();
                 yield return front;
 
                 // add children to the queue
-                if(front is LightElementNode lightElementNode)
+                if (front is LightElementNode lightElementNode)
                 {
-                    foreach(var child in lightElementNode.Children)
+                    foreach (var child in lightElementNode.Children)
                     {
                         queue.Enqueue(child);
                     }

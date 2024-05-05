@@ -23,9 +23,9 @@ namespace Composite.Core.Iterators
 
         private IEnumerable<LightNode> Filter()
         {
-            foreach(var item in _iterationManner)
+            foreach (var item in _iterationManner)
             {
-                if (_predicate(item)) yield return item;    
+                if (_predicate(item)) yield return item;
             }
         }
 
@@ -48,7 +48,7 @@ namespace Composite.Core.Iterators
         /// <param name="node"></param>
         /// <param name="predicate"></param>
         /// <returns></returns>
-        public static ILightHTMLIterator Where(this LightElementNode node, Predicate<LightNode> predicate) 
+        public static ILightHTMLIterator Where(this LightElementNode node, Predicate<LightNode> predicate)
         {
             return new FilterIterator(predicate, node.GetDFSIterator());
         }

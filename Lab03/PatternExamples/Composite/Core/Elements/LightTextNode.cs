@@ -1,6 +1,6 @@
 ﻿namespace Composite.Core.Elements
 {
-    public class LightTextNode : LightNode
+    public class LightTextNode : LightElementNode
     {
         public string Text { get; set; }
 
@@ -14,18 +14,15 @@
             Text = text;
         }
 
+        public override void OnDoubleClick()
+        {
+            // copy text to the buffer of the user.
+            Console.WriteLine("Copied Text to the buffer.");
+            
+            base.OnDoubleClick();
+        }
+
         /// Methods below are used in recursive HTML generating. For leaf LigthTextNode it may looks empty but it's enough.
-
-        public override string GetInnerHTML()
-        {
-            // nothing inside text node.
-            return "";
-        }
-
-        public override string GetOuterHTML()
-        {
-            return Text;
-        }
 
         public override IEnumerable<string> GetLazyInnerHTML()
         {

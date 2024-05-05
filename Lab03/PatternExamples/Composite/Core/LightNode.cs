@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using Composite.Core.Observer;
+using System.Collections.ObjectModel;
 
 namespace Composite.Core
 {
@@ -40,6 +41,53 @@ namespace Composite.Core
 
         // lifecycle hooks
 
-        //public abstract void OnRender();
+        /* events
+         * it can be done with c# build in event sytem
+         * for this example i will ignore event listener interface, i just use lambda functions.
+         */
+
+        public virtual void OnClick() 
+        {
+            Clicked.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnDoubleClick()
+        {
+            DoubleCliked.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnFocus()
+        {
+            Focused.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnUnfocus()
+        {
+            Unfocused.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnHoverIn()
+        {
+            HoveredIn.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnHoverOut()
+        {
+            HoveredOut.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void OnRender()
+        {
+            Rendered.Invoke(this, EventArgs.Empty);
+        }
+
+        public EventManager<LightNode, EventArgs> Clicked = new();
+        public EventManager<LightNode, EventArgs> DoubleCliked = new();
+        public EventManager<LightNode, EventArgs> Focused = new();
+        public EventManager<LightNode, EventArgs> Unfocused = new();
+
+        public EventManager<LightNode, EventArgs> HoveredIn = new();
+        public EventManager<LightNode, EventArgs> HoveredOut = new();
+        public EventManager<LightNode, EventArgs> Rendered = new();
     }
 }

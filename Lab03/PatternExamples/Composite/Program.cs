@@ -1,6 +1,6 @@
 ﻿using Composite.Commands;
 
-var command = new DemonstrateIterator();
+var command = new DemonstrateTemplate();
 
 command.Execute(null);
 

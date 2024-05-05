@@ -2,7 +2,7 @@
 
 namespace Composite.Core.Iterators
 {
-    public interface ILightHTMLIterator: IEnumerable<LightNode>
+    public interface ILightHTMLIterator : IEnumerable<LightNode>
     {
         //LightNode? GetNext();
 

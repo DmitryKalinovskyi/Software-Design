@@ -14,22 +14,22 @@ namespace Composite.Commands
         {
             var root = new LightElementNode("root");
 
-            root.OnClick += (sender, e) =>
+            root.Clicked += (sender, e) =>
             {
                 Console.WriteLine("You clicked to the body!");
             };
 
-            var lambda = (LightElementNode node, EventArgs e) =>
+            var lambda = (LightNode node, EventArgs e) =>
             {
                 Console.WriteLine("This lambda should not be shown in the first time.");
             };
 
-            root.OnClick += lambda;
+            root.Clicked += lambda;
 
-            root.OnClick.Invoke(root, new EventArgs());
+            root.Clicked.Invoke(root, new EventArgs());
 
-            root.OnClick -= lambda;
-            root.OnClick.Invoke(root, new EventArgs());
+            root.Clicked -= lambda;
+            root.Clicked.Invoke(root, new EventArgs());
         }
     }
 }

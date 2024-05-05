@@ -19,7 +19,7 @@ namespace Composite.Commands
             root.Children.Add(new ImageNode("folder1/happy.png", new FileImageSource()));
 
 
-            void DisplayLightNode(LightNode lightNode)
+            void DisplayLightNode(LightElementNode lightNode)
             {
                 foreach (var line in lightNode.GetLazyOuterHTML())
                 {

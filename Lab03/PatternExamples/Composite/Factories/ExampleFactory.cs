@@ -1,5 +1,4 @@
-﻿using Composite.Command;
-using Composite.Core;
+﻿using Composite.Core;
 using Composite.Core.Elements;
 using System;
 using System.Collections.Generic;
@@ -7,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Composite.Commands
+namespace Composite.Factories
 {
-    public class DemonstrateComposite : LightHTMLCommand
+    public class ExampleFactory : ILightHTMLFactory
     {
-        public override void Execute(object? parameter)
+        public LightNode Create()
         {
             var root = new LightElementNode("body");
 
@@ -33,10 +32,7 @@ namespace Composite.Commands
 
             root.Children.Add(orderedList);
 
-            foreach (var htmlLine in root.GetLazyOuterHTML())
-            {
-                Console.WriteLine(htmlLine);
-            }
+            return root;
         }
     }
 }

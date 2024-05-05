@@ -1,6 +1,6 @@
 ﻿namespace Composite.Core.Elements.Image
 {
-    public class ImageNode : LightNode
+    public class ImageNode : LightElementNode
     {
         private IImageSource _imageSource;
         public string Href { get; set; } = string.Empty;
