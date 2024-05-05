@@ -35,6 +35,12 @@ foreach(var item in root.GetBFSIterator())
     Console.WriteLine(item.GetOuterHTML());
 }
 
+Console.WriteLine("Filtering nodes:");
+foreach(var item in root.Where((node) => node is LightTextNode))
+{
+    Console.WriteLine(item.GetOuterHTML());
+}
+
 //void DemonstrateStrategy()
 //{
 //    var root = new LightElementNode("body");
