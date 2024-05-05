@@ -1,4 +1,5 @@
 ﻿using Composite.Core.Observer;
+using Composite.Core.Visitor;
 using System.Collections.ObjectModel;
 
 namespace Composite.Core
@@ -38,6 +39,8 @@ namespace Composite.Core
         public abstract IEnumerable<string> GetLazyInnerHTML();
 
         public abstract IEnumerable<string> GetLazyOuterHTML();
+
+        public abstract void Accept(ILightHTMLVisitor visitor);
 
         // lifecycle hooks
 

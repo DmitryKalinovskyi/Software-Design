@@ -1,4 +1,6 @@
-﻿namespace Composite.Core.Elements.Image
+﻿using Composite.Core.Visitor;
+
+namespace Composite.Core.Elements.Image
 {
     public class ImageNode : LightElementNode
     {
@@ -41,6 +43,11 @@
         public override string GetOuterHTML()
         {
             return string.Join("", GetLazyInnerHTML());
+        }
+
+        public override void Accept(ILightHTMLVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }
