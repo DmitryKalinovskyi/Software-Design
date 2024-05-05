@@ -1,6 +1,6 @@
 ﻿using Composite.Commands;
 
-var command = new DemonstrateVisitor();
+var command = new DemonstrateState();
 
 command.Execute(null);
 
