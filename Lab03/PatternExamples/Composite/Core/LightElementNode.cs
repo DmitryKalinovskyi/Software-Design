@@ -2,62 +2,25 @@
 {
     public partial class LightElementNode : LightNode
     {
-        private string _tagName = "";
-        public string TagName
-        {
-            get => _tagName;
-            set
-            {
-                _tagName = value.ToLower();
-            }
-        }
-
-        public bool IsSelfClosing { get; set; }
-
-        public List<string> CSSClassList { get; set; }
-
         public List<LightNode> Children { get; set; }
 
         public LightElementNode()
         {
             TagName = "?";
             IsSelfClosing = false;
-            CSSClassList = new List<string>();
             Children = new List<LightNode>();
         }
 
         public LightElementNode(string tagName, bool isSelfClosing = false)
-        {
-            TagName = tagName;
-            IsSelfClosing = isSelfClosing;
-            CSSClassList = new();
-            Children = new();
-        }
+            : this(tagName, isSelfClosing, Enumerable.Empty<string>()) { }
 
-        public LightElementNode(string tagName, bool isSelfClosing, List<string> cSSClassList)
-        {
-            TagName = tagName;
-            IsSelfClosing = isSelfClosing;
-            CSSClassList = cSSClassList;
-            Children = new();
-        }
+        public LightElementNode(string tagName, bool isSelfClosing, IEnumerable<string> cSSClassList)
+            : this(tagName, isSelfClosing, cSSClassList, Enumerable.Empty<LightNode>()){ }
 
-        public LightElementNode(string tagName, bool isSelfClosing, List<string> cSSClassList, List<LightNode> children)
+        public LightElementNode(string tagName, bool isSelfClosing, IEnumerable<string> cSSClassList, IEnumerable<LightNode> children)
+            : base(tagName, isSelfClosing, cSSClassList) 
         {
-            TagName = tagName;
-            IsSelfClosing = isSelfClosing;
-            CSSClassList = cSSClassList;
-            Children = children;
-        }
-
-        public override string GetInnerHTML()
-        {
-            return string.Join("", GetLazyInnerHTML());
-        }
-
-        public override string GetOuterHTML()
-        {
-            return string.Join("", GetLazyOuterHTML());
+            Children = new(children);
         }
 
         protected virtual string GetHead()
