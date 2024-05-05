@@ -11,7 +11,7 @@ namespace Composite.Core.Iterators
     {
         private IEnumerator<LightNode> _enumerator;
 
-        public DFSIterator(LightElementNode root) 
+        public DFSIterator(LightElementNode root)
         {
             _enumerator = DFSGenerator(root).GetEnumerator();
         }
@@ -27,13 +27,13 @@ namespace Composite.Core.Iterators
             yield return node;
 
             // we can use only LightElementNode, because it's base class for all composite elements.
-            if(node is LightElementNode lightElementNode)
+            if (node is LightElementNode lightElementNode)
             {
                 // then iterate by child
-                foreach(var child in lightElementNode.Children)
+                foreach (var child in lightElementNode.Children)
                 {
-                    
-                    foreach(var c in DFSGenerator(child))
+
+                    foreach (var c in DFSGenerator(child))
                     {
                         yield return c;
                     }
