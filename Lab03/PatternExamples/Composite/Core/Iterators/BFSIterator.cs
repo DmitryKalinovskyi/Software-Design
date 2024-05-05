@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,22 @@ namespace Composite.Core.Iterators
             _root = root;
         }
 
+        public IEnumerator<LightNode> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
         public LightNode? GetNext()
         {
             throw new NotImplementedException();
         }
 
         public bool HasNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
         }

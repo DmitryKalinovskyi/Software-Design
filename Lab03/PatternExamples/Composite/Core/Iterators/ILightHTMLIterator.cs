@@ -1,9 +1,11 @@
-﻿namespace Composite.Core.Iterators
-{
-    public interface ILightHTMLIterator
-    {
-        LightNode? GetNext();
+﻿using System.Collections;
 
-        bool HasNext();
+namespace Composite.Core.Iterators
+{
+    public interface ILightHTMLIterator: IEnumerable<LightNode>
+    {
+        //LightNode? GetNext();
+
+        //bool HasNext();
     }
 }

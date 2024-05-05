@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,21 +9,39 @@ namespace Composite.Core.Iterators
 {
     public class DFSIterator : ILightHTMLIterator
     {
-        private LightElementNode _root;
+        private IEnumerator<LightNode> _enumerator;
 
         public DFSIterator(LightElementNode root) 
         {
-            _root = root;
+            _enumerator = DFSGenerator(root).GetEnumerator();
         }
 
-        public LightNode? GetNext()
+        private IEnumerable<LightNode> DFSGenerator(LightNode node)
         {
-            throw new NotImplementedException();
+            // start from the root node
+            yield return node;
+
+            if(node is LightElementNode lightElementNode)
+            {
+                // then iterate by child
+                foreach(var child in lightElementNode.Children)
+                {
+                    foreach(var c in DFSGenerator(child))
+                    {
+                        yield return c;
+                    }
+                }
+            }
         }
 
-        public bool HasNext()
+        public IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();
+            return _enumerator;
+        }
+
+        IEnumerator<LightNode> IEnumerable<LightNode>.GetEnumerator()
+        {
+            return _enumerator;
         }
     }
 
