@@ -1,4 +1,6 @@
-﻿namespace Composite.Core
+﻿using Composite.Core.Visitor;
+
+namespace Composite.Core
 {
     public partial class LightElementNode : LightNode
     {
@@ -56,6 +58,11 @@
             }
 
             yield return $"</{TagName}>";
+        }
+
+        public override void Accept(ILightHTMLVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }

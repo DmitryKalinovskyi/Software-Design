@@ -1,4 +1,6 @@
-﻿namespace Composite.Core.Elements
+﻿using Composite.Core.Visitor;
+
+namespace Composite.Core.Elements
 {
     public class LightTextNode : LightElementNode
     {
@@ -33,6 +35,11 @@
         public override IEnumerable<string> GetLazyOuterHTML()
         {
             yield return Text;
+        }
+
+        public override void Accept(ILightHTMLVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }
